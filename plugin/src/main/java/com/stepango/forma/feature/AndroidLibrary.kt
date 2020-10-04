@@ -15,7 +15,8 @@ data class AndroidLibraryFeatureConfiguration(
     val consumerMinificationFiles: Set<String> = emptySet(),
     val manifestPlaceholders: Map<String, Any> = emptyMap(),
     val selfValidator: Validator = validator(LibraryModule),
-    val dataBinding: Boolean = false
+    val dataBinding: Boolean = false,
+    val viewBinding: Boolean = false
 )
 
 fun androidLibraryFeatureDefinition(
@@ -39,6 +40,7 @@ fun androidLibraryFeatureDefinition(
             compileOptions.applyFrom(formaConfiguration)
 
             buildFeatures.dataBinding = feature.dataBinding
+            buildFeatures.viewBinding = feature.viewBinding
         }
     }
 )

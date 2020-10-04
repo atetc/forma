@@ -11,5 +11,6 @@ androidProjectConfiguration(
         google()
         jcenter()
     },
-    dataBinding = true
+    dataBinding = true,
+    viewBinding = true
 )
